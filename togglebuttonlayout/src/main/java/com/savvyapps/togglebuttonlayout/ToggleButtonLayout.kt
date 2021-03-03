@@ -278,4 +278,9 @@ class ToggleButtonLayout : CardView {
             view.background = null
         }
     }
+
+    fun removeToggle(toggleId: Int) {
+        toggles.removeAll { it.id == toggleId }
+        resetTogglesIfNeeded()
+    }
 }
